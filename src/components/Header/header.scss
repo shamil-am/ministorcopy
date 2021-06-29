@@ -1,0 +1,128 @@
+@import "../../common/common.scss";
+
+.header {
+  background-color: $mainBgColor;
+  align-items: center;
+  .logoSide {
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .navSide {
+    color: $mainTextLightColor;
+    & > ul {
+      // gorunen ul
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > li {
+        //   gorunen li-ler
+        font-size: 17px;
+        text-transform: uppercase;
+        position: relative;
+        padding: 38px 10px 38px 0px;
+        color: $mainTextLightColor;
+        font-weight: bold;
+        & > a {
+          //   // kontakt + start here
+          color: $mainTextLightColor;
+          text-decoration: none;
+        }
+        .subMenu {
+          // alt menu
+          background-color: transparent;
+          position: absolute;
+          z-index: 9;
+          opacity: 0;
+          visibility: hidden;
+          width: 15rem;
+          top: 200%;
+          left: 0;
+          font-weight: normal;
+          transition: all 0.25s ease-in;
+          ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+              border-bottom: 1px solid $mainTextLightColor;
+              position: relative;
+              a {
+                display: inline-block;
+                font-size: 1vw;
+                padding: 1rem;
+                width: 100%;
+                color: $mainTextLightColor;
+                text-decoration: none;
+                transition: all 0.3s;
+                &:hover {
+                  background-color: $mainTextLightColor;
+                  color: $mainBgColor;
+                }
+              }
+              .subMenu {
+                /// portfolio alt menusu hoverden evvel
+                left: 100%;
+                top: 100%;
+              }
+              .subMenu.active {
+                /// portfolio alt menusu
+                left: 100%;
+                top: 0;
+              }
+            }
+          }
+          &.active {
+            background-color: #000000;
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+          }
+        }
+      }
+    }
+    // ox iconlarona tesir
+    .MuiSvgIcon-root {
+      color: gray;
+    }
+  }
+}
+
+//logonun kicik olcude qara fonunun ag olmasi
+@media only screen and (max-width: 992px) {
+  .logoSide {
+    background-color: $mainTextLightColor;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navSide {
+    ul {
+      li {
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navSide {
+    ul {
+      li {
+        font-size: 15px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .navSide {
+    ul {
+      li {
+        font-size: 17px !important;
+      }
+    }
+  }
+}
