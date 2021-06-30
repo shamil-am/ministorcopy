@@ -2,12 +2,12 @@ import React from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-
 ///
 import Logo from "../../assets/images/logo.png";
 import LogoDark from "../../assets/images/logo2.png";
+import BurgerMenu from "../Navbar/BurgerMenu";
 
-///
+//////
 function Header() {
   ///////////////
   return (
@@ -26,8 +26,7 @@ function Header() {
         <Navbar />
       </div>
       <div className="d-flex justify-content-between d-lg-none col-12 burgerMenu">
-        <h1 style={{ color: "white" }}>Menu</h1>
-        <h1 style={{ color: "white" }}>Burger</h1>
+        <BurgerMenu />
       </div>
     </div>
   );

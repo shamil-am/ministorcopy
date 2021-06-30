@@ -85,6 +85,125 @@
     .MuiSvgIcon-root {
       color: gray;
     }
+    .startHere {
+      a {
+        background-color: $mainTextLightColor;
+        color: transparent;
+        padding: 12px 24px;
+        border-radius: 8px;
+        position: relative;
+        &::after {
+          content: "";
+          height: 0;
+          width: 100%;
+          border-radius: 8px;
+          background-color: $mainBgColor;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: 9;
+          transition: 0.3s;
+        }
+        &::before {
+          content: "START HERE";
+          height: 100%;
+          width: 100%;
+          border-radius: 8px;
+          background-color: transparent;
+          color: $mainBgColor;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: 99;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.3s;
+        }
+        &:hover {
+          &::after {
+            height: 100%;
+          }
+        }
+        &:hover {
+          &::before {
+            color: $mainTextLightColor;
+          }
+        }
+      }
+    }
+  }
+  //////////////burgermenu////////////////
+
+  .burgerMenu {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    .burgerHeader {
+      width: 100%;
+      color: $mainTextLightColor;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      h5 {
+        font-weight: bold;
+      }
+      .MuiSvgIcon-root {
+        cursor: pointer;
+      }
+    }
+    .burgerSecretMenu {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: all .5s ease-in;
+      .listHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #cdcbcbad;
+        cursor: pointer;
+        h6,
+        span {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+      .listSecret {
+        max-height: 0;
+        overflow: hidden;
+        transition: all .5s ease-out;
+        ul {
+          li {
+            border-bottom: 1px solid #cdcbcbad;
+            a {
+              text-decoration: none;
+              color: $mainBgColor;
+              display: block;
+              padding: 0.75rem 0.75rem 0.75rem 5rem;
+              transition: background-color 0.3s;
+              &:hover {
+                background-color: #c4c4c47e;
+              }
+            }
+            &:last-child{
+              border-bottom: none;
+            }
+          }
+        }
+      }
+      .listSecret.active {
+        max-height: 600px;
+      }
+    }
+    .burgerSecretMenu.active {
+      max-height: 600px;
+    }
   }
 }
 
@@ -95,12 +214,56 @@
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .navSide {
     ul {
       li {
+        //gorunen li-ler
+        font-size: 11px !important;
+      }
+    }
+  }
+  .navSide {
+    ul {
+      li {
+        .subMenu {
+          ul {
+            li {
+              a {
+                //submenu li-ler
+                font-size: 10px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1080px) {
+  .navSide {
+    ul {
+      li {
+        //gorunen li-ler
         font-size: 13px !important;
+      }
+    }
+  }
+  .navSide {
+    ul {
+      li {
+        .subMenu {
+          ul {
+            li {
+              a {
+                //submenu li-ler
+                font-size: 11px !important;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -115,6 +278,22 @@
       }
     }
   }
+  .navSide {
+    ul {
+      li {
+        .subMenu {
+          ul {
+            li {
+              a {
+                //submenu li-ler
+                font-size: 13px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -122,6 +301,22 @@
     ul {
       li {
         font-size: 17px !important;
+      }
+    }
+  }
+  .navSide {
+    ul {
+      li {
+        .subMenu {
+          ul {
+            li {
+              a {
+                //submenu li-ler
+                font-size: 15px !important;
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -129,8 +129,8 @@ function Navbar() {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
-        <li className="ms-3">
-          <Link to="/startHere">Start Here</Link>
+        <li className="ms-4 startHere">
+          <Link to="/start-here" >Start Here</Link>
         </li>
       </ul>
     </>
