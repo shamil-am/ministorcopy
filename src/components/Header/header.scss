@@ -154,12 +154,12 @@
       }
     }
     .burgerSecretMenu {
-      position: absolute;
       left: 0;
       top: 100%;
       width: 100%;
       max-height: 0;
       overflow: hidden;
+      background-color: $mainTextLightColor;
       transition: all .5s ease-in;
       .listHeader {
         display: flex;
@@ -202,7 +202,7 @@
       }
     }
     .burgerSecretMenu.active {
-      max-height: 600px;
+      max-height: 1400px;
     }
   }
 }

@@ -25,11 +25,12 @@ function BurgerMenu() {
   };
   const openCloseHandler = (e) => {
     e.target.nextElementSibling.classList.toggle("active");
+    console.log(e.target.nextElementSibling);
   };
   ////
   return (
     <>
-      <div className="burgerHeader">
+      <div className="burgerHeader px-3">
         <h5>Menu</h5>
         {!burgerOpen ? (
           <MenuIcon onClick={toggleBurgerBtn} />
@@ -215,10 +216,7 @@ function BurgerMenu() {
           </ul>
         </div>
         <div className="sammpleListHolder">
-          <div
-            className="listHeader"
-            onClick={toggleBurgerBtn}
-          >
+          <div className="listHeader" onClick={toggleBurgerBtn}>
             <h6>Cotact</h6>
           </div>
         </div>

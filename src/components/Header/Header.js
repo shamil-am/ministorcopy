@@ -25,7 +25,7 @@ function Header() {
       <div className="d-none d-lg-flex col-12 col-lg-7 navSide">
         <Navbar />
       </div>
-      <div className="d-flex justify-content-between d-lg-none col-12 burgerMenu">
+      <div className="d-lg-none col-12 burgerMenu p-0">
         <BurgerMenu />
       </div>
     </div>
