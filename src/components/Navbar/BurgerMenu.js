@@ -24,8 +24,7 @@ function BurgerMenu() {
     }, 200);
   };
   const openCloseHandler = (e) => {
-    e.target.nextElementSibling.classList.toggle("active");
-    console.log(e.target.nextElementSibling);
+    e.currentTarget.nextElementSibling.classList.toggle("active");
   };
   ////
   return (
