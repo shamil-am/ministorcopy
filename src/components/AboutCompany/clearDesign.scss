@@ -1,0 +1,33 @@
+.cleanDesign {
+  padding: 2rem 0;
+  position: relative;
+  z-index: 9;
+  .cardHolder {
+    padding: 40px 24px 32px 24px;
+    text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    &:hover {
+      box-shadow: 0px 0px 10px 15px rgba(0, 0, 0, 0.14);
+    }
+    .iconHolder {
+      background-color: #000;
+      color: #ffffff;
+      display: inline-block;
+      padding: 1.5rem;
+      border-radius: 50%;
+    }
+    .textHolder {
+      h5 {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .cleanDesign {
+    margin-top: -130px;
+  }
+}

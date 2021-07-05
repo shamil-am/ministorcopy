@@ -13,7 +13,8 @@ function Welcome() {
 
   ///////
   return (
-    <div className="row welcome">
+    // Welcome section
+    <div className="welcome row">
       <div className="col-12">
         <div className="animatedInfo">
           <div className="textHolder">
