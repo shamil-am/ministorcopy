@@ -1,0 +1,89 @@
+@import "../../common/common.scss";
+
+.about {
+  padding: 2rem 0;
+  .sectionContent {
+    .sectionHeader {
+      margin-bottom: 2rem;
+      position: relative;
+      &::before {
+        content: "";
+        background-color: #000;
+        height: 3px;
+        width: 10%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+      }
+      h1 {
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 6px;
+      }
+    }
+    .sectionText {
+      margin-bottom: 2rem;
+    }
+    .sectionMission,
+    .sectionVision {
+      display: flex;
+      align-items: center;
+      padding-bottom: 2rem;
+      .iconSide {
+        padding-right: 1rem;
+        .iconWrapper {
+          padding: 1rem;
+          background-color: #333333;
+          color: #ffffff;
+          border-radius: 50%;
+        }
+      }
+      .iconTextSide {
+        h5 {
+          font-weight: bold;
+        }
+      }
+    }
+    .aboutUsBtn {
+      margin: 3rem 0;
+      a {
+        background-color: transparent;
+        color: #ffffff;
+        padding: 18px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+        z-index: 9;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        &::before {
+          content: "";
+          height: 0;
+          width: 100%;
+          background-color: #000;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: -1;
+          transition: all .3s ease-in-out;
+        }
+        &::after {
+          content: "";
+          height: 100%;
+          width: 100%;
+          background-color: #333333;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: -2;
+        }
+        &:hover {
+          &::before {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

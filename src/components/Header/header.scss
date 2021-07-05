@@ -160,7 +160,7 @@
       max-height: 0;
       overflow: hidden;
       background-color: $mainTextLightColor;
-      transition: all .5s ease-in;
+      transition: all 0.5s ease-in;
       .listHeader {
         display: flex;
         justify-content: space-between;
@@ -177,7 +177,7 @@
       .listSecret {
         max-height: 0;
         overflow: hidden;
-        transition: all .5s ease-out;
+        transition: all 0.5s ease-out;
         ul {
           li {
             border-bottom: 1px solid #cdcbcbad;
@@ -191,7 +191,7 @@
                 background-color: #c4c4c47e;
               }
             }
-            &:last-child{
+            &:last-child {
               border-bottom: none;
             }
           }
@@ -215,6 +215,14 @@
 }
 
 @media only screen and (min-width: 992px) {
+  //header componenti boyuk olcude fixed qalmasi ucun
+
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
   .navSide {
     ul {
       li {
