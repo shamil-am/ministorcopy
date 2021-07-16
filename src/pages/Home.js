@@ -5,6 +5,7 @@ import CleanDesign from "../components/AboutCompany/CleanDesign";
 import About from "../components/AboutCompany/About";
 import Services from "../components/OurServices/Services";
 import SecuredCustomer from "../components/SecuredCustomer/SecuredCustomer";
+import RecentWork from "../components/OurRecentWork/RecentWork";
 ///////
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <About/>
       <Services/>
       <SecuredCustomer/>
+      <RecentWork/>
     </>
   );
 }

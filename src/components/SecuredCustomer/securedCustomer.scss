@@ -1,4 +1,4 @@
-@import '../../common/common.scss';
+@import "../../common/common.scss";
 ///////
 .securedCustomer {
   padding: 4rem 0;
@@ -26,50 +26,106 @@
       font-weight: 700;
       font-family: "Space Grotesk", sans-serif;
       font-size: 2.5rem;
+      text-align: center;
     }
     .ourContactBtn {
-        margin: 3rem 0;
-        a {
-          background-color: transparent;
-          color: #000000;
-          padding: 18px 30px;
-          display: inline-block;
-          border-radius: 6px;
-          text-decoration: none;
-          z-index: 9;
-          text-transform: uppercase;
-          font-weight: bold;
-          position: relative;
-          overflow: hidden;
-          transition: all .4s;
+      margin: 3rem 0;
+      a {
+        background-color: transparent;
+        color: #000000;
+        padding: 18px 30px;
+        display: inline-block;
+        border-radius: 6px;
+        text-decoration: none;
+        z-index: 9;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s;
+        &::before {
+          content: "";
+          height: 0;
+          width: 100%;
+          background-color: #000;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: -1;
+          transition: all 0.3s ease-in-out;
+        }
+        &::after {
+          content: "";
+          height: 100%;
+          width: 100%;
+          background-color: #ffffff;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: -2;
+        }
+        &:hover {
+          color: #ffffff;
           &::before {
-            content: "";
-            height: 0;
-            width: 100%;
-            background-color: #000;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            z-index: -1;
-            transition: all .3s ease-in-out;
-          }
-          &::after {
-            content: "";
             height: 100%;
-            width: 100%;
-            background-color: #ffffff;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            z-index: -2;
-          }
-          &:hover {
-            color: #ffffff;
-            &::before {
-              height: 100%;
-            }
           }
         }
       }
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .securedCustomer {
+    .container {
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .securedCustomer {
+    .container {
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .securedCustomer {
+    .container {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .securedCustomer {
+    .container {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .securedCustomer {
+    .container {
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
   }
 }
