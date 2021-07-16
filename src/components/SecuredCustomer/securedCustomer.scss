@@ -1,0 +1,75 @@
+@import '../../common/common.scss';
+///////
+.securedCustomer {
+  padding: 4rem 0;
+  background-image: url("../../assets//images/call-to-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #0000007c;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  .container {
+    position: relative;
+    z-index: 9;
+    h2 {
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: 700;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2.5rem;
+    }
+    .ourContactBtn {
+        margin: 3rem 0;
+        a {
+          background-color: transparent;
+          color: #000000;
+          padding: 18px 30px;
+          display: inline-block;
+          border-radius: 6px;
+          text-decoration: none;
+          z-index: 9;
+          text-transform: uppercase;
+          font-weight: bold;
+          position: relative;
+          overflow: hidden;
+          transition: all .4s;
+          &::before {
+            content: "";
+            height: 0;
+            width: 100%;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: all .3s ease-in-out;
+          }
+          &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -2;
+          }
+          &:hover {
+            color: #ffffff;
+            &::before {
+              height: 100%;
+            }
+          }
+        }
+      }
+  }
+}

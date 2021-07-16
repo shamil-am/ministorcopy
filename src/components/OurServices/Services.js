@@ -46,33 +46,30 @@ function Services() {
                 content="Lorem ipsum dolor sit amet, cons ctetuer adipiscing elit, sed diam nonummy nibh."
               />
             </div>
-            
+          <div className="col-12 col-md-6 col-lg-4">
+            {" "}
+            <ServiceCardCreator
+              icon={<WbIncandescentIcon />}
+              header="UNLIMITED"
+              content="Lorem ipsum dolor sit amet, cons ctetuer adipiscing elit, sed diam nonummy nibh."
+            />
           </div>
-          <div className="row">
-            <div className="col-12 col-md-6 col-lg-4">
-              {" "}
-              <ServiceCardCreator
-                icon={<WbIncandescentIcon />}
-                header="UNLIMITED"
-                content="Lorem ipsum dolor sit amet, cons ctetuer adipiscing elit, sed diam nonummy nibh."
-              />
-            </div>
-            <div className="col-12 col-md-6 col-lg-4">
-              {" "}
-              <ServiceCardCreator
-                icon={<EditIcon />}
-                header="WEB DESIGN"
-                content="Lorem ipsum dolor sit amet, cons ctetuer adipiscing elit, sed diam nonummy nibh."
-              />
-            </div>
-            <div className="col-12 col-md-6 col-lg-4">
-              {" "}
-              <ServiceCardCreator
-                icon={<CameraAltIcon />}
-                header="GRAPHIC DESIGN"
-                content="Lorem ipsum dolor sit amet, cons ctetuer adipiscing elit, sed diam nonummy nibh."
-              />
-            </div>
+          <div className="col-12 col-md-6 col-lg-4">
+            {" "}
+            <ServiceCardCreator
+              icon={<EditIcon />}
+              header="WEB DESIGN"
+              content="Lorem ipsum dolor sit amet, cons ctetuer adipiscing elit, sed diam nonummy nibh."
+            />
+          </div>
+          <div className="col-12 col-md-6 col-lg-4">
+            {" "}
+            <ServiceCardCreator
+              icon={<CameraAltIcon />}
+              header="GRAPHIC DESIGN"
+              content="Lorem ipsum dolor sit amet, cons ctetuer adipiscing elit, sed diam nonummy nibh."
+            />
+          </div>
           </div>
         </div>
       </div>
