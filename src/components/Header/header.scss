@@ -4,12 +4,17 @@
   background-color: $mainBgColor;
   align-items: center;
   .logoSide {
-    text-align: center;
+    align-items: center;
+  }
+  .logoSideSmall{
+    padding: 1rem 0;
+    background-color: $mainTextLightColor;
     justify-content: center;
-    padding: 20px 0;
+
   }
   .navSide {
     color: $mainTextLightColor;
+    justify-content: flex-end;
     & > ul {
       // gorunen ul
       display: flex;
@@ -204,13 +209,6 @@
     .burgerSecretMenu.active {
       max-height: 1400px;
     }
-  }
-}
-
-//logonun kicik olcude qara fonunun ag olmasi
-@media only screen and (max-width: 992px) {
-  .logoSide {
-    background-color: $mainTextLightColor;
   }
 }
 

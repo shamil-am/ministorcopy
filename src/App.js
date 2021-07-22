@@ -3,7 +3,7 @@ import Vh from "./common/Vh";
 ///
 function App() {
   return (
-    <div className="App container-fluid">
+    <div className="App">
      <Home/>
      <Vh/>
     </div>
