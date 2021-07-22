@@ -10,7 +10,6 @@
         text-align: center;
         font-weight: 600;
         padding-bottom: 1rem;
-
       }
       &::before {
         content: "";
@@ -49,7 +48,19 @@
       }
     }
   }
-  .recentWorkDisplay{
-    
+  .recentWorkDisplay {
+    .filter-container {
+      text-align: center;
+      .filtr-item {
+        position: static;
+        .imageHolder {
+          text-align: center;
+          img {
+            width: 100%;
+            padding: 1rem;
+          }
+        }
+      }
+    }
   }
 }
