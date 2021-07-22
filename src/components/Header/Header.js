@@ -19,7 +19,6 @@ function Header() {
               <img src={Logo} alt="logo" />
             </Link>
           </div>
-
           <div className="d-none d-lg-flex col-lg-8 navSide">
             <Navbar />
           </div>

@@ -88,6 +88,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .welcome {
+    height: 400px;
     .animatedInfo {
       h2 {
         font-size: 1rem !important;
@@ -106,6 +107,7 @@
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     .welcome {
+      height: 500px;
       .animatedInfo {
         h2 {
           font-size: 1.5rem !important;
@@ -125,6 +127,7 @@
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     .welcome {
+      height: 600px;
       .animatedInfo {
         h2 {
           font-size: 2rem !important;
@@ -143,6 +146,7 @@
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     .welcome {
+      height: 700px;
       .animatedInfo {
         h2 {
           font-size: 2rem !important;
@@ -162,6 +166,7 @@
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     .welcome {
+      height: 800px;
       .animatedInfo {
         h2 {
           font-size: 2rem !important;
