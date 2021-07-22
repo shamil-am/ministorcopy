@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./recentWorks.scss";
 import Filterizr from "filterizr";
+import { Link } from "react-router-dom";
+import ControlCameraIcon from "@material-ui/icons/ControlCamera";
+import LinkIcon from "@material-ui/icons/Link";
 
 //images
 import watch from "../../assets/images/ministor-port1.jpg";
@@ -13,12 +16,19 @@ import flower from "../../assets/images/ministor-port6.jpg";
 /////
 function RecentWorks() {
   useEffect(() => {
-    // const options = { gutterPixels: 100 };
     const options = {};
     const filterizr = new Filterizr(".filter-container", options);
-    // filterizr.setOptions({layout: 'sameSize'});
+    [...document.querySelectorAll(".categoryBtn")][0].classList.add("active");
   });
 
+  const makeActive = (e) => {
+    const allCategory = document.querySelectorAll(".categoryBtn");
+    console.log();
+    [...allCategory].forEach((category) => {
+      category.classList.remove("active");
+    });
+    e.target.classList.add("active");
+  };
   //
   return (
     <div className="recentWorks">
@@ -32,13 +42,55 @@ function RecentWorks() {
           <div className="col-12">
             <div className="selectionSide">
               <ul>
-                <li data-filter="all">All Work</li>
-                <li data-filter="1">Business</li>
-                <li data-filter="2">Design</li>
-                <li data-filter="3">It</li>
-                <li data-filter="4">Marketing</li>
-                <li data-filter="5">Responsive</li>
-                <li data-filter="6">Web Design</li>
+                <li
+                  data-filter="all"
+                  className="categoryBtn"
+                  onClick={makeActive}
+                >
+                  All Work
+                </li>
+                <li
+                  data-filter="1"
+                  className="categoryBtn"
+                  onClick={makeActive}
+                >
+                  Business
+                </li>
+                <li
+                  data-filter="2"
+                  className="categoryBtn"
+                  onClick={makeActive}
+                >
+                  Design
+                </li>
+                <li
+                  data-filter="3"
+                  className="categoryBtn"
+                  onClick={makeActive}
+                >
+                  It
+                </li>
+                <li
+                  data-filter="4"
+                  className="categoryBtn"
+                  onClick={makeActive}
+                >
+                  Marketing
+                </li>
+                <li
+                  data-filter="5"
+                  className="categoryBtn"
+                  onClick={makeActive}
+                >
+                  Responsive
+                </li>
+                <li
+                  data-filter="6"
+                  className="categoryBtn"
+                  onClick={makeActive}
+                >
+                  Web Design
+                </li>
               </ul>
             </div>
           </div>
@@ -50,8 +102,18 @@ function RecentWorks() {
               data-category="1,3"
               data-sort="value"
             >
-              <div className="imageHolder">
-                <img src={watch} alt="watch" />
+              <img src={watch} alt="watch" />
+              <div className="imageTextHolder">
+                <h5>Demo Media Title 1</h5>
+                <p>Business,It</p>
+              </div>
+              <div className="imageLinkHolder">
+                <Link to="/">
+                  <ControlCameraIcon />
+                </Link>
+                <Link to="/">
+                  <LinkIcon />
+                </Link>
               </div>
             </div>
             <div
@@ -61,6 +123,18 @@ function RecentWorks() {
             >
               <div className="imageHolder">
                 <img src={scissors} alt="scissors" />
+                <div className="imageTextHolder">
+                  <h5>Demo Media Title 1</h5>
+                  <p>Business,It</p>
+                </div>
+                <div className="imageLinkHolder">
+                  <Link to="/">
+                    <ControlCameraIcon />
+                  </Link>
+                  <Link to="/">
+                    <LinkIcon />
+                  </Link>
+                </div>
               </div>
             </div>
             <div
@@ -70,6 +144,18 @@ function RecentWorks() {
             >
               <div className="imageHolder">
                 <img src={coffe} alt="coffe" />
+                <div className="imageTextHolder">
+                  <h5>Demo Media Title 1</h5>
+                  <p>Business,It</p>
+                </div>
+                <div className="imageLinkHolder">
+                  <Link to="/">
+                    <ControlCameraIcon />
+                  </Link>
+                  <Link to="/">
+                    <LinkIcon />
+                  </Link>
+                </div>
               </div>
             </div>
             <div
@@ -79,6 +165,18 @@ function RecentWorks() {
             >
               <div className="imageHolder">
                 <img src={vase} alt="vase" />
+                <div className="imageTextHolder">
+                  <h5>Demo Media Title 1</h5>
+                  <p>Business,It</p>
+                </div>
+                <div className="imageLinkHolder">
+                  <Link to="/">
+                    <ControlCameraIcon />
+                  </Link>
+                  <Link to="/">
+                    <LinkIcon />
+                  </Link>
+                </div>
               </div>
             </div>
             <div
@@ -88,6 +186,18 @@ function RecentWorks() {
             >
               <div className="imageHolder">
                 <img src={flower} alt="flower" />
+                <div className="imageTextHolder">
+                  <h5>Demo Media Title 1</h5>
+                  <p>Business,It</p>
+                </div>
+                <div className="imageLinkHolder">
+                  <Link to="/">
+                    <ControlCameraIcon />
+                  </Link>
+                  <Link to="/">
+                    <LinkIcon />
+                  </Link>
+                </div>
               </div>
             </div>
             <div
@@ -97,6 +207,18 @@ function RecentWorks() {
             >
               <div className="imageHolder">
                 <img src={radio} alt="radio" />
+                <div className="imageTextHolder">
+                  <h5>Demo Media Title 1</h5>
+                  <p>Business,It</p>
+                </div>
+                <div className="imageLinkHolder">
+                  <Link to="/">
+                    <ControlCameraIcon />
+                  </Link>
+                  <Link to="/">
+                    <LinkIcon />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

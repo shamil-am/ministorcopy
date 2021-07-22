@@ -129,7 +129,7 @@ function Navbar() {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
-        <li className="ms-4 startHere">
+        <li className="ms-4 startHere pe-0">
           <Link to="/start-here" >Start Here</Link>
         </li>
       </ul>
